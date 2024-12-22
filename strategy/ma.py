@@ -8,8 +8,8 @@ class MaStrategy(BaseStrategy):
 
     _name = "Ma"
     params = (
-        ("maperiod", 15),
-        ("printlog", False),
+        ("maperiod", 5),
+        ("printlog", True),
     )
 
     def __init__(self):

@@ -7,7 +7,7 @@ from utils.logs import LOGGER
 from utils.processing import gen_stock_df, load_strategy, run_backtrader
 from utils.schemas import StrategyBase
 
-st.set_page_config(page_title="backtrader")
+st.set_page_config(page_title="backtrader", layout="wide")
 
 
 def main():

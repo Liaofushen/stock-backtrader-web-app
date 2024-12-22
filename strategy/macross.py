@@ -5,7 +5,7 @@ from .base import BaseStrategy
 
 class MaCrossStrategy(BaseStrategy):
 
-    params = (("printlog", False), ("fast_length", 10), ("slow_length", 50))
+    params = (("printlog", True), ("fast_length", 5), ("slow_length", 20))
 
     def __init__(self):
         # Keep a reference to the "close" line in the data[0] dataseries

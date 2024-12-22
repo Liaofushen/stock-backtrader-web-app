@@ -10,7 +10,7 @@ import yaml
 from .schemas import StrategyBase
 
 
-@st.cache(allow_output_mutation=True)
+@st.cache_data
 def gen_stock_df(ak_params: dict) -> pd.DataFrame:
     """generate stock data
 
@@ -23,7 +23,7 @@ def gen_stock_df(ak_params: dict) -> pd.DataFrame:
     return ak.stock_zh_a_hist(**ak_params)
 
 
-@st.cache
+@st.cache_data(hash_funcs={StrategyBase: lambda x: hash(str(x))})
 def run_backtrader(
     stock_df: pd.DataFrame,
     start_date: datetime.datetime,

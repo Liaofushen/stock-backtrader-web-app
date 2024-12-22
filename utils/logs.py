@@ -97,7 +97,7 @@ class MultiprocessHandler(logging.FileHandler):
 
 def write_log(log_name, log_num=7):
     logger = logging.getLogger()
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.INFO)
     fmt = logging.Formatter(
         "%(asctime)s ｜ %(levelname)s ｜ %(filename)s ｜ %(funcName)s ｜ %(lineno)s ｜ %(message)s"
     )
@@ -106,13 +106,13 @@ def write_log(log_name, log_num=7):
     stream_handler.setLevel(logging.INFO)
     stream_handler.setFormatter(fmt)
 
-    file_handler = MultiprocessHandler(log_name, when="D", backupCount=log_num, encoding="utf-8")
-    file_handler.setLevel(logging.DEBUG)
-    file_handler.setFormatter(fmt)
-    file_handler.doChangeFile()
+    # file_handler = MultiprocessHandler(log_name, when="D", backupCount=log_num, encoding="utf-8")
+    # file_handler.setLevel(logging.INFO)
+    # file_handler.setFormatter(fmt)
+    # file_handler.doChangeFile()
 
     logger.addHandler(stream_handler)
-    logger.addHandler(file_handler)
+    # logger.addHandler(file_handler)
 
     return logger
 

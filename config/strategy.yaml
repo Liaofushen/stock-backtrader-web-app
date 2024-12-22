@@ -2,20 +2,80 @@ Ma:
   -
     name: maperiod
     type: int
-    min: 10
-    max: 31
-    step: 1
+    min: 5
+    max: 30
+    step: 5
 
 MaCross:
   -
     name: fast_length
     type: int
-    min: 1
+    min: 3
     max: 11
-    step: 5
+    step: 2
   -
     name: slow_length
     type: int
-    min: 25
+    min: 15
     max: 35
     step: 5
+
+Enhanced:
+  - 
+    name: fast_ma
+    type: int
+    min: 3
+    max: 10
+    step: 2
+  - 
+    name: slow_ma
+    type: int
+    min: 15
+    max: 30
+    step: 5
+  - 
+    name: atr_multiplier
+    type: int
+    min: 2
+    max: 3
+    step: 1
+
+Fibonacci:
+  - 
+    name: period
+    type: int
+    min: 15
+    max: 30
+    step: 5
+  - 
+    name: atr_stop
+    type: int
+    min: 2
+    max: 3
+    step: 1
+
+Breakout:
+  - 
+    name: volume_ratio
+    type: int
+    min: 2
+    max: 3
+    step: 1
+  - 
+    name: price_up_pct
+    type: int
+    min: 4
+    max: 7
+    step: 1
+  - 
+    name: stop_loss_pct
+    type: int
+    min: 3
+    max: 7
+    step: 1
+  - 
+    name: take_profit_pct
+    type: int
+    min: 5
+    max: 10
+    step: 1
